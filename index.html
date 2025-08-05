@@ -3,48 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <title>Дашборд Looker Studio без логотипа</title>
-  <!-- Убираем адаптивность и зум -->
   <meta name="viewport" content="width=1200, user-scalable=no">
+
+  <!-- Font Awesome CDN для иконок -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-...замени-на-актуальный..."
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      background-color: #f9f9f9;
+      background-color: #1E3A8A;
       font-family: sans-serif;
-      min-width: 1200px; /* Фиксированная минимальная ширина */
+      min-width: 1200px;
       overflow-x: auto;
     }
 
-    /* Фиксированная шапка с эффектом стекла */
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      padding: 12px 20px;
-      background: rgba(255, 255, 255, 0.6);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      z-index: 1000;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    }
+	header {
+	  position: fixed;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  padding: 12px 20px;
+	  background: rgba(255, 255, 255, 0.6);
+	  backdrop-filter: blur(12px);
+	  -webkit-backdrop-filter: blur(12px);
+	  z-index: 1000;
+	  text-align: center;
+	  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+	  /* Центрирование */
+	  max-width: 1160px;
+	  margin: 0 auto;
+	  border-radius: 7px;
+	   top: 7px;
+	  
+	}
+	
 
     header h1 {
       margin: 0;
       font-size: 1.8rem;
-      color: #4cc9f0;
+      color: #1E3A8A;
     }
 
-    /* Отступ сверху для тела страницы, чтобы не перекрывалось шапкой */
     body {
       padding-top: 70px;
     }
 
     .iframe-container {
       position: relative;
-      width: 1200px; /* фиксированная ширина */
-      height: 900px; /* фиксированная высота */
+      width: 1200px;
+      height: 900px;
       margin: 0 auto;
       overflow: hidden;
       border-radius: 12px;
@@ -59,11 +74,35 @@
       height: 120%;
       border: none;
     }
+
+    footer {
+      width: 1200px;
+      margin: 40px auto 20px;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
+      color: white;
+      font-size: 0.9rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .social-icons a {
+      color: white;
+      margin-left: 15px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #4cc9f0;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>📊 Дашборд Looker Studio</h1>
+    <h1>IBDataLink's DASHBOARD</h1>
   </header>
 
   <div class="iframe-container">
@@ -73,5 +112,18 @@
       sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
     </iframe>
   </div>
+
+  <!-- Футер -->
+  <footer>
+    <div>
+      © 2025 Аналитический дашборд | Компания "IBDataLink"<br>
+      Created by IBDataLink Company | for [your company name] Company
+    </div>
+    <div class="social-icons">
+      <a href="https://wa.me/77082171313/" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://t.me/VVinterr1/" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+      <a href="https://www.instagram.com/ilyar.zaripoff/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+  </footer>
 </body>
 </html>
